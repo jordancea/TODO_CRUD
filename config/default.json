@@ -1,0 +1,4 @@
+{
+    "mongoURI": "mongodb+srv://Jordancea:jordancea123@todoapp.pyz41.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+    "jwtSecret": "mysecrettoken"
+}
