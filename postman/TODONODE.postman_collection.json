@@ -1,0 +1,267 @@
+{
+	"info": {
+		"_postman_id": "f6603711-75b9-4645-9046-fe4207f6a8f3",
+		"name": "TODONODE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User&Auth",
+			"item": [
+				{
+					"name": "Register User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"firstname\": \"Joce\",\r\n\"lastname\":\"Arsov\",\r\n\"email\":\"mail@mail.com\",\r\n\"password\":\"123456\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get auth User",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjA1MTBmMDRhNzAwZGIwODEwYmI3ZmMwIn0sImlhdCI6MTYxNTkyNDk5NiwiZXhwIjoxNjE1OTI4NTk2fQ.E5tQqrQ2YJZN_C--WAVswv18dvBtQaf-yiqT3aRjQs8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/api/auth",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"auth"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"mail@mail.com\",\r\n    \"password\":\"123456\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/auth",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"auth"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Activity",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjA1MTFhNmQ2Y2U3NWU0MWU4ODBhNGRkIn0sImlhdCI6MTYxNjI2MTU4MiwiZXhwIjoxNjE2NjIxNTgyfQ.Ki-x2AQ2bYBR4MZd6ATvqHHB4r4J-GhzCcS9EDbUpGM",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/api/users/activity/605635d1208ed611a00f778f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"users",
+								"activity",
+								"605635d1208ed611a00f778f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single Activity for User",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjA1MTFhNmQ2Y2U3NWU0MWU4ODBhNGRkIn0sImlhdCI6MTYxNjI2MTU4MiwiZXhwIjoxNjE2NjIxNTgyfQ.Ki-x2AQ2bYBR4MZd6ATvqHHB4r4J-GhzCcS9EDbUpGM",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/api/users/activity/6056347d208ed611a00f778e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"users",
+								"activity",
+								"6056347d208ed611a00f778e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Activities for a user",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjA1MTFhNmQ2Y2U3NWU0MWU4ODBhNGRkIn0sImlhdCI6MTYxNjI2MTU4MiwiZXhwIjoxNjE2NjIxNTgyfQ.Ki-x2AQ2bYBR4MZd6ATvqHHB4r4J-GhzCcS9EDbUpGM",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/api/users/activity",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"users",
+								"activity"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Activity",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjA1MTFhNmQ2Y2U3NWU0MWU4ODBhNGRkIn0sImlhdCI6MTYxNjI2MTU4MiwiZXhwIjoxNjE2NjIxNTgyfQ.Ki-x2AQ2bYBR4MZd6ATvqHHB4r4J-GhzCcS9EDbUpGM",
+								"description": "JSON content",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\": \"My second Activity\",\r\n    \"status\": \"pending\",\r\n    \"from\": \"10-11-2021\"  \r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/users/activity",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"users",
+								"activity"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update single Activity",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjA1MTFhNmQ2Y2U3NWU0MWU4ODBhNGRkIn0sImlhdCI6MTYxNjI2MTU4MiwiZXhwIjoxNjE2NjIxNTgyfQ.Ki-x2AQ2bYBR4MZd6ATvqHHB4r4J-GhzCcS9EDbUpGM",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\": \"My second Activityaaaaaaaaaaa\",\r\n    \"status\": \"pending\",\r\n    \"from\": \"10-11-2021\"  \r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/users/activity/60564992487773217803ccb8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"users",
+								"activity",
+								"60564992487773217803ccb8"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
